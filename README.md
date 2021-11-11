@@ -1,1 +1,1 @@
-A simple command-line application.
+this 100 days of Psycho coding Challenge 

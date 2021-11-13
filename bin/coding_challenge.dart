@@ -3,6 +3,7 @@
 
 // import 'day_4.dart';
 import 'day_5.dart';
+import 'day_6.dart';
 import 'exercise/ex_2.dart';
 
 void main(List<String> arguments) {
@@ -11,5 +12,9 @@ void main(List<String> arguments) {
   //day_3();
   // day_4([2, 4, 2, 6, 12, 22, 66, 77, 100, 20, 32, 54], '-');
   // func();
-  rangeOfNumbers(2,3);
+  // rangeOfNumbers(2,3);
+  print(secretPassword('mubashirh'));
+  
+  // secretPassword("mubashirh") ➞ "h s a j s i 13u2"
+ // secretPassword("mattedabi") ➞ "detbcj13a20"
 }

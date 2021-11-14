@@ -8,7 +8,7 @@ import 'DSA/linked_list.dart';
 // import 'exercise/ex_2.dart';
 // import 'dart:math';
 
-void main(List<String> arguments) {
+void main(List<String> arguments) async {
   // day_1(100);
   // day_2(12);
   //day_3();
@@ -20,19 +20,20 @@ void main(List<String> arguments) {
   // secretPassword("mattedabi") ➞ "d e t bcj13a20"]
 
   LinkedList list = LinkedList();
-  list.display();
+  // list.display();
   list.add(2);
   list.add(3);
   list.add(4);
-  // list.addAt(2, 1);
-  // list.addFirst(1000);
-  // list.addLast(2000);
+  list.addAt(2, 1);
+  list.addFirst(1000);
+  list.addLast(2000);
   list.display();
   list.delete(3);
-  print('getters');
+  list.reverse();
+  print(list.first);
+  print(list.last);
+  print(list.getNext(3));
+  print(list.find(200));
   list.display();
-  // print(list.first);
-  // print(list.last);
-  // print(list.getNext(4));
-  // print(list.find(200));
+  print(list.length);
 }

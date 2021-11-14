@@ -257,19 +257,27 @@ class LinkedList {
     _head = _previous;
   }
 
+// taking count of elements contains in this linkedList
   int get length {
+    // temporary node for go through list
     Node? _temp = _head;
+    // count of elements initially it's 0
     int _count = 0;
-
+// wer are checking head equals null
     if (_head == null) {
+      // if head equals null its return default counts (count default 0 so wer are return 0)
       return _count;
     } else {
+      // other wise linkedList has values
+      // then we are looping inside List
+      // loop will stop when reach last element of the list
       while (_temp != null) {
         _temp = _temp._next;
+        // we are incrementing count
         _count++;
       }
     }
-
+    // finally we return the count
     return _count;
   }
 }

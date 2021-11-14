@@ -58,12 +58,14 @@ String secretPassword(String password) {
   List<String> lastPart = password.substring(6, 9).split('');
   List<String> alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
-  firstPart[0]=(alphabet.indexWhere((element) => element == firstPart.first) + 1).toString();
-  firstPart.last =(alphabet.indexWhere((element) => element == firstPart.last) + 1).toString();
-  
+  firstPart[0]=(check(alphabet,firstPart.first));
+  firstPart[0] = (check(alphabet, firstPart.last));
+
   for (var i = 0; i < lastPart.length; i++) {
     var UV = (alphabet.indexWhere((element) => lastPart[i] == element) + 1);
     lastPart[i] =(alphabet[UV == 26 ? 0 : UV]);
   }
   return [...middlePart, ...lastPart, ...firstPart].join();
 }
+
+ check(List<String> alphabet,elem) => (alphabet.indexWhere((element) => element == elem) + 1).toString();

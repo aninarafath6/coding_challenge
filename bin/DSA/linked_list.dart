@@ -170,15 +170,66 @@ class LinkedList {
     }
   }
 
+// delete element from tail means from last
   void get deleteLast {
+    // temp element for take the deleting element from the
     Node? _temp = _head;
+    // prev node for take previous node of temp
     Node? _prev;
+
+    //  loop will stop when reach tail (means when reach temp on the last element of this linkedList)
     while (_temp?.next != null) {
+      // setting the previous node to temp
       _prev = _temp;
+      // and setting the _temp to temp's next node
       _temp = _temp?.next;
     }
+    // when loop will complete we got the last element and last element's previous node
+    // then we are cutting the connection of last element
+    // and we give the connection to the pervious element
     _tail = _prev;
+    // and we are removing the next of tail(it means we are cutting the previous node s connection to the last element)
     _tail!.next = null;
+  }
+
+  void delete(int value) {
+    // temporary node for go through this list
+    // its value initially head
+    Node? _temp = _head;
+    Node? _prev;
+
+// check value is head if head then we are setting head to head.next node
+    if (value == _head?.data) {
+      _head = _head?.next;
+      return;
+    }
+
+    // loop will stop when we find the value or we are reach tail (means when reach temp on the last element of this linkedList)
+    while (_temp != null && _temp.data != value) {
+      _prev = _temp;
+      _temp = _temp.next;
+    }
+
+    // we will get here [_prev,_temp]
+
+    if (_temp == null) {
+      // here we did't found any thing
+      print('$value is not exist in ths list');
+      // so we just return.
+      return;
+    }
+    // check temp.data == tail.data
+    if (_temp.data == _tail?.data) {
+      // this case is the given value is tail
+      // so we can sett the prev as a tail
+      _tail = _prev;
+      // and sett the tail.next to null
+      _tail?.next = null;
+    } else {
+      // here we found the value in middle nodes
+      // so we just interChanging   the connection (we just setting the prev's next as temp's next)
+      _prev?.next = _temp.next;
+    }
   }
 }
 

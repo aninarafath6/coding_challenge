@@ -28,7 +28,7 @@ void main(List<String> arguments) {
   // list.addFirst(1000);
   // list.addLast(2000);
   list.display();
-  list.deleteLast;
+  list.delete(3);
   print('getters');
   list.display();
   // print(list.first);

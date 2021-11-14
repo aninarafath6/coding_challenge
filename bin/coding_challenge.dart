@@ -16,9 +16,8 @@ void main(List<String> arguments) {
   // func();
   // rangeOfNumbers(2,3);
   // print(secretPassword('mubashirh'));
-
   // secretPassword("mubashirh") ➞ "h s a j s i 13u2"
-  // secretPassword("mattedabi") ➞ "detbcj13a20"]
+  // secretPassword("mattedabi") ➞ "d e t bcj13a20"]
 
   LinkedList list = LinkedList();
   list.display();
@@ -27,13 +26,13 @@ void main(List<String> arguments) {
   list.add(4);
   // list.addAt(2, 1);
   // list.addFirst(1000);
-  list.addLast(2000);
-
+  // list.addLast(2000);
   list.display();
-
+  list.deleteLast;
   print('getters');
+  list.display();
   // print(list.first);
   // print(list.last);
-  print(list.getNext(4));
-  print(list.find(200));
+  // print(list.getNext(4));
+  // print(list.find(200));
 }

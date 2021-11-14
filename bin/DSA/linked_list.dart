@@ -147,7 +147,7 @@ class LinkedList {
       // so wer return false
       return false;
     } else {
-      // other wise list contains  the value 
+      // other wise list contains  the value
       // so we return the true
       return true;
     }
@@ -157,6 +157,29 @@ class LinkedList {
   int? get first => _head?.data;
   // get last element in the linked List
   int? get last => _tail?.data;
+
+  // delete Operator
+  void get deleteFirst {
+    // if head contains any value ?
+    // then set head to head's next
+    if (_head != null) {
+      _head = _head!.next;
+    } else {
+      // other wise we wil handling error situation
+      print('linkedList is empty');
+    }
+  }
+
+  void get deleteLast {
+    Node? _temp = _head;
+    Node? _prev;
+    while (_temp?.next != null) {
+      _prev = _temp;
+      _temp = _temp?.next;
+    }
+    _tail = _prev;
+    _tail!.next = null;
+  }
 }
 
 // node class

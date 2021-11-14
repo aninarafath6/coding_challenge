@@ -19,7 +19,7 @@ void main(List<String> arguments) async {
   // secretPassword("mubashirh") ➞ "h s a j s i 13u2"
   // secretPassword("mattedabi") ➞ "d e t bcj13a20"]
 
-  LinkedList list = LinkedList();
+  tourney list = tourney();
   // list.display();
   list.add(2);
   list.add(3);

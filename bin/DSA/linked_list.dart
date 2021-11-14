@@ -1,4 +1,4 @@
-class LinkedList {
+class tourney {
   // head and tail initially null
   Node? _head;
   Node? _tail;
@@ -280,6 +280,11 @@ class LinkedList {
     // finally we return the count
     return _count;
   }
+
+// we are simply checking the head is null its means the linked list is empty so we return true
+// other wise we return false
+// we are use here tourney operator for checking
+  bool get isEmpty => _head == null ? true : false;
 }
 
 // node class

@@ -102,11 +102,61 @@ class LinkedList {
     }
   }
 
-// get first element
+// get next element of given value
+  int? getNext(int where) {
+    // making a temporary node for go through list its value initially head
+    Node? temp = _head;
+    // looping the temp , it will be stop when we  found the value or temp will be tail ;
+    while (temp != null && temp.data != where) {
+      // we are assigning temp.next to temp (it will act like loop)
+      temp = temp.next;
+    }
+    // when loop stop we are checking the temp is now null
+    if (temp == null) {
+      // it means when temp null that case we cant find the where value in this list
+      print('$where is not contains this list');
+      // so we are return null
+      return null;
+    } else {
+      // is temp.next == null it means the given value is tail so we can now just return null
+      if (temp.next == null) {
+        // we are handling this situation
+        print('$where is the last element of this linked list');
+        // just return the null
+        return null;
+      } else {
+        // this case we find the given value and the they have the next value .
+        // the find value stored in temp node.
+        // so we can just return the next temp.next value.
+        return temp.next!.data;
+      }
+    }
+  }
 
+// find given element is contains this list
+  bool find(int value) {
+// temporary node for go through the list
+    Node? temp = _head;
+
+// loop will stop when temp == null or temp.data == value
+    while (temp != null && temp.data != value) {
+      temp = temp.next;
+    }
+    // check temp == null its means this list is not contains the given value
+    if (temp == null) {
+      // so wer return false
+      return false;
+    } else {
+      // other wise list contains  the value 
+      // so we return the true
+      return true;
+    }
+  }
+
+  // get first element
   int? get first => _head?.data;
-  int? get last =>_tail?.data;
-  
+  // get last element in the linked List
+  int? get last => _tail?.data;
 }
 
 // node class

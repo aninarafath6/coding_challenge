@@ -24,15 +24,16 @@ void main(List<String> arguments) {
   list.display();
   list.add(2);
   list.add(3);
-  // list.add(4);
+  list.add(4);
   // list.addAt(2, 1);
   // list.addFirst(1000);
-  // list.addFirst(2000);
+  list.addLast(2000);
 
   list.display();
 
   print('getters');
-  print(list.first);
-  print(list.last);
-
+  // print(list.first);
+  // print(list.last);
+  print(list.getNext(4));
+  print(list.find(200));
 }

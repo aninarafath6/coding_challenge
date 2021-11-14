@@ -2,6 +2,7 @@
 // import 'day_2.dart';
 
 // import 'day_4.dart';
+import 'DSA/linked_list.dart';
 import 'day_5.dart';
 import 'day_6.dart';
 import 'exercise/ex_2.dart';
@@ -18,28 +19,11 @@ void main(List<String> arguments) {
 
   // secretPassword("mubashirh") ➞ "h s a j s i 13u2"
   // secretPassword("mattedabi") ➞ "detbcj13a20"]
-  var arr = [
-    1,
-    2,
-    3,
-    4,
-    5,
-  ];
 
-  var resultArr = List.filled(arr.length, 0);
-
-  for (var i = 0; i < arr.length; i++) {
-    for (var j = 0; j < arr.length; j++) {
-      if (i == j) {
-        print('${arr[i]} ${arr[j]}');
-      } else {
-        resultArr[i] += arr[i] + arr[j];
-      }
-    }
-  }
-
-  var res = (resultArr.reduce(max).toString() +
-      " " +
-      resultArr.reduce(min).toString());
-  print(res);
+  LinkedList list = LinkedList();
+  list.display();
+  list.add(2);
+  list.add(3);
+  list.add(4);
+  list.display();
 }

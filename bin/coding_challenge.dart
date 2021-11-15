@@ -19,7 +19,7 @@ void main(List<String> arguments) async {
   // secretPassword("mubashirh") ➞ "h s a j s i 13u2"
   // secretPassword("mattedabi") ➞ "d e t bcj13a20"]
 
-  tourney list = tourney();
+  LinkedList list = LinkedList();
   // list.display();
   list.add(2);
   list.add(3);
@@ -34,6 +34,8 @@ void main(List<String> arguments) async {
   print(list.last);
   print(list.getNext(3));
   print(list.find(200));
-  list.display();
+  print(list.isEmpty);
   print(list.length);
+  list.display();
+  // var a = [].;
 }

@@ -1,8 +1,7 @@
-class tourney {
+class LinkedList {
   // head and tail initially null
   Node? _head;
   Node? _tail;
-
   // add value into linked list
   void add(int data) {
     // create a new node with given data
@@ -281,10 +280,15 @@ class tourney {
     return _count;
   }
 
-// we are simply checking the head is null its means the linked list is empty so we return true
-// other wise we return false
-// we are use here tourney operator for checking
+ // we are simply checking the head is null its means the linked list is empty so we return true
+ // other wise we return false
+ // we are use here tourney operator for checking
   bool get isEmpty => _head == null ? true : false;
+
+  // we are simply checking the head is not null its means the linked list is not empty so we return true
+  // other wise we return false
+ // we are use here tourney operator for checking
+  bool get isNotEmpty => _head != null ? true : false;
 }
 
 // node class
